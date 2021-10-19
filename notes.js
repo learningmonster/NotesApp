@@ -3,4 +3,3 @@ const getNotes = function (a, b) {
 };
 
 module.exports = getNotes;
-``;

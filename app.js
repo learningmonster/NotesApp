@@ -1,10 +1,14 @@
+// const importedName = require("./utils.js");
+// const fs = require("fs");
 // const validator = require("validator");
 const chalk = require("chalk");
-
 const getNotes = require("./notes.js");
 
-const msg = getNotes();
-console.log(msg);
+// console.log(importedName);
+// fs.appendFileSync("notes.txt", " This will be appended to the file. ");
+
+// const msg = getNotes();
+// console.log(msg);
 
 // console.log(validator.isEmail("andrew@example.com"));
 // console.log(validator.isEmail("andrew@example"));
@@ -19,19 +23,27 @@ console.log(msg);
 // Bonus: Use docs to mess around with other styles. Make text bold and inversed.
 
 const log = console.log;
+// const greenMsg = chalk.green("Success!!!");
 
-log(chalk.green("Success!"));
+// log(greenMsg);
+// log(chalk.green("Success!"));
+// log(chalk.bold("Success!"));
+// log(chalk.inverse("Success!"));
+// log(chalk.blue.bgRed.bold("Hello world!"));
+// log(chalk.blue.bgRed.bold.inverse("Hello world!"));
+// log(chalk.yellow.bgBlue.bold.inverse("Hello world!"));
+// log(chalk.red.bgYellow.inverse("Hello world!"));
+// log(chalk.red.bgYellow("Hello world!"));
 
-log(chalk.bold("Success!"));
+const command = process.argv[2];
 
-log(chalk.inverse("Success!"));
+// log(command);
+// log(command == "add");
 
-log(chalk.blue.bgRed.bold("Hello world!"));
+log(process.argv);
 
-log(chalk.blue.bgRed.bold.inverse("Hello world!"));
-
-log(chalk.yellow.bgBlue.bold.inverse("Hello world!"));
-
-log(chalk.red.bgYellow.inverse("Hello world!"));
-
-log(chalk.red.bgYellow("Hello world!"));
+if (command === "add") {
+  log("Adding note!");
+} else if (command === "remove") {
+  log("Removing note!!");
+}
